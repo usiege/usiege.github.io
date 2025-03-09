@@ -1,46 +1,80 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>个人博客</title>
+  <title>综合静态网页示例</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+    }
+
+    nav {
+      background-color: #333;
+      color: white;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      padding: 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
     }
 
     header {
-      background-color: #333;
-      color: white;
       text-align: center;
-      padding: 20px;
+      padding: 50px;
+      background-color: #f0f0f0;
     }
 
-    main {
+    section {
       padding: 20px;
-      max-width: 800px;
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+    }
+
+    form {
+      max-width: 400px;
       margin: 0 auto;
     }
 
-    article {
-      background-color: white;
-      border: 1px solid #ddd;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 5px;
+    form label {
+      display: block;
+      margin-bottom: 5px;
     }
 
-    article h2 {
-      margin-top: 0;
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
     }
 
-    .meta {
-      color: #777;
-      font-size: 0.9em;
+    form input[type="submit"] {
+      background-color: #333;
+      color: white;
+      cursor: pointer;
     }
 
     footer {
@@ -53,29 +87,50 @@
 </head>
 
 <body>
-  <!-- 博客头部 -->
+  <!-- 导航栏 -->
+  <nav>
+    <ul>
+      <li><a href="#">首页</a></li>
+      <li><a href="#">关于我们</a></li>
+      <li><a href="#">联系我们</a></li>
+    </ul>
+  </nav>
+
+  <!-- 头部 -->
   <header>
-    <h1>我的个人博客</h1>
-    <p>分享我的技术见解和生活感悟</p>
+    <h1>欢迎来到我们的网站</h1>
+    <p>探索更多精彩内容</p>
   </header>
 
-  <!-- 文章列表 -->
-  <main>
-    <article>
-      <h2><a href="#">第一篇文章标题</a></h2>
-      <p class="meta">发布于 <time datetime="2025-03-10">2025 年 3 月 10 日</time></p>
-      <p>这是第一篇文章的简短摘要。在这里你可以简要介绍文章的主要内容，吸引读者点击阅读全文。</p>
-    </article>
-    <article>
-      <h2><a href="#">第二篇文章标题</a></h2>
-      <p class="meta">发布于 <time datetime="2025-03-09">2025 年 3 月 9 日</time></p>
-      <p>这是第二篇文章的简短摘要。同样，你可以用几句话概括文章的核心要点。</p>
-    </article>
-  </main>
+  <!-- 图片展示部分 -->
+  <section>
+    <h2>图片展示</h2>
+    <img src="https://via.placeholder.com/800x400" alt="示例图片">
+  </section>
 
-  <!-- 博客页脚 -->
+  <!-- 文本介绍部分 -->
+  <section>
+    <h2>关于我们</h2>
+    <p>我们是一个充满激情的团队，致力于为用户提供高质量的服务和产品。我们拥有丰富的经验和专业的知识，能够满足不同客户的需求。</p>
+  </section>
+
+  <!-- 表单部分 -->
+  <section>
+    <h2>联系我们</h2>
+    <form>
+      <label for="name">姓名:</label>
+      <input type="text" id="name" required>
+      <label for="email">邮箱:</label>
+      <input type="email" id="email" required>
+      <label for="message">留言:</label>
+      <textarea id="message" required></textarea>
+      <input type="submit" value="提交">
+    </form>
+  </section>
+
+  <!-- 页脚 -->
   <footer>
-    <p>版权所有 &copy; 2025 你的名字</p>
+    <p>版权所有 &copy; 2025 示例网站</p>
   </footer>
 </body>
 
