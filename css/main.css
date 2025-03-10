@@ -1,0 +1,52 @@
+/* 基础科技感样式 */
+body {
+    background: #0a0a1a;
+    color: #00f3ff;
+    font-family: 'Courier New', monospace;
+}
+
+/* 霓虹文字效果 */
+.neon-text {
+    position: relative;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff,
+                 0 0 20px #0ff,
+                 0 0 30px #0ff;
+}
+
+/* 赛博按钮样式 */
+.cyber-button {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #0ff;
+    background: rgba(0, 255, 255, 0.1);
+    transition: all 0.3s;
+    position: relative;
+}
+
+.cyber-button:hover {
+    background: rgba(0, 255, 255, 0.3);
+    box-shadow: 0 0 15px #0ff;
+}
+
+/* 全息投影卡片 */
+.cyber-card {
+    background: rgba(10, 10, 30, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    padding: 2rem;
+    margin: 2rem 0;
+    position: relative;
+}
+
+/* 矩阵边框动画 */
+.matrix-border {
+    border-image: linear-gradient(45deg, #0ff, #0f0) 1;
+    animation: borderFlow 3s linear infinite;
+}
+
+@keyframes borderFlow {
+    from { border-image-source: linear-gradient(45deg, #0ff, #0f0); }
+    50% { border-image-source: linear-gradient(45deg, #0f0, #0ff); }
+    to { border-image-source: linear-gradient(45deg, #0ff, #0f0); }
+}

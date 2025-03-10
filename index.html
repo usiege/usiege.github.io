@@ -1,137 +1,46 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>综合静态网页示例</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav {
-      background-color: #333;
-      color: white;
-    }
-
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-    }
-
-    nav ul li {
-      padding: 15px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-    }
-
-    header {
-      text-align: center;
-      padding: 50px;
-      background-color: #f0f0f0;
-    }
-
-    section {
-      padding: 20px;
-      text-align: center;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      margin: 20px 0;
-    }
-
-    form {
-      max-width: 400px;
-      margin: 0 auto;
-    }
-
-    form label {
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    form input,
-    form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 3px;
-    }
-
-    form input[type="submit"] {
-      background-color: #333;
-      color: white;
-      cursor: pointer;
-    }
-
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>CyberSpace | 科技博客</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
-
 <body>
-  <!-- 导航栏 -->
-  <nav>
-    <ul>
-      <li><a href="#">首页</a></li>
-      <li><a href="#">关于我们</a></li>
-      <li><a href="#">联系我们</a></li>
-    </ul>
-  </nav>
+    <!-- 3D背景容器 -->
+    <div id="canvas-container"></div>
+    
+    <!-- 主内容区 -->
+    <div class="cyber-container">
+        <!-- 头部区域 -->
+        <header class="cyber-header">
+            <h1 class="neon-text" data-text="CYBERSPACE">CYBERSPACE</h1>
+            <nav class="cyber-nav">
+                <a href="#about" class="cyber-button">关于</a>
+                <a href="#projects" class="cyber-button">项目</a>
+                <a href="#blog" class="cyber-button">博客</a>
+            </nav>
+        </header>
 
-  <!-- 头部 -->
-  <header>
-    <h1>欢迎来到我们的网站</h1>
-    <p>探索更多精彩内容</p>
-  </header>
+        <!-- 主要内容区 -->
+        <main>
+            <section id="about" class="cyber-card">
+                <h2 class="glitch-text">关于我</h2>
+                <div class="hologram-content">
+                    <!-- 此处添加个人介绍内容 -->
+                </div>
+            </section>
 
-  <!-- 图片展示部分 -->
-  <section>
-    <h2>图片展示</h2>
-    <img src="https://via.placeholder.com/800x400" alt="示例图片">
-  </section>
+            <section id="skills" class="cyber-card matrix-border">
+                <h2 class="cyber-title">技术栈</h2>
+                <div class="skill-grid">
+                    <!-- 技能图表 -->
+                </div>
+            </section>
+        </main>
+    </div>
 
-  <!-- 文本介绍部分 -->
-  <section>
-    <h2>关于我们</h2>
-    <p>我们是一个充满激情的团队，致力于为用户提供高质量的服务和产品。我们拥有丰富的经验和专业的知识，能够满足不同客户的需求。</p>
-  </section>
-
-  <!-- 表单部分 -->
-  <section>
-    <h2>联系我们</h2>
-    <form>
-      <label for="name">姓名:</label>
-      <input type="text" id="name" required>
-      <label for="email">邮箱:</label>
-      <input type="email" id="email" required>
-      <label for="message">留言:</label>
-      <textarea id="message" required></textarea>
-      <input type="submit" value="提交">
-    </form>
-  </section>
-
-  <!-- 页脚 -->
-  <footer>
-    <p>版权所有 &copy; 2025 示例网站</p>
-  </footer>
+    <script src="js/particle.js"></script>
+    <script src="js/effects.js"></script>
 </body>
-
 </html>
